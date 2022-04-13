@@ -1,0 +1,136 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+/*
+  3. Allow percentage-based heights in the application
+*/
+html, body {
+  height: 100%;
+}
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+  6. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+  7. Remove built-in form typography styles
+*/
+input, button, textarea, select {
+  font: inherit;
+}
+/*
+  8. Avoid text overflows
+*/
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+/*
+  9. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
+}
+
+/* Custom Things */
+
+html, body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.text-md { font-size: 1.25rem; }
+
+.site-color-scheme { color:  #555; background: white; }
+
+.main-container {
+  max-width: 720px;
+  margin: 20px auto;
+  padding: 20px 10px;
+}
+
+.main-container__section {
+  margin-bottom: 40px;
+}
+
+.rounded-list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  
+  list-style: none;
+}
+
+.rounded-list > li {
+  margin: 10px;
+  padding: 5px 10px;
+  border-radius: 10px;
+  border: 1px solid #eee;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.project-list {
+  margin: 0;
+  padding: 0;
+  margin-top: 30px;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  
+  list-style: none;
+}
+
+.project-list > .project-list__item {
+  width: 46%;
+  padding: 10px;
+
+  border: 1px solid #eee;
+  border-radius: 6px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.project-list > .project-list__item > * {
+  padding: 10px 5px;
+}
+
+.project-list > .project-list__item > h3 {
+  text-align: center;
+}
+
+a { color: white; }
+
+.project-list > .project-list__item > a { 
+  margin-top: auto;
+}
+
+@media (prefers-color-scheme: dark) {
+  a { color: white; }
+  .site-color-scheme { background: #333; color: white; }
+}
+
+@media (prefers-color-scheme: light) {
+  a { color: #555; }
+  .site-color-scheme   { background: white; color:  #555; }
+}
