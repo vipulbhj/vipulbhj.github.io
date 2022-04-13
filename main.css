@@ -102,10 +102,13 @@ html, body {
 
 .project-list > .project-list__item {
   width: 46%;
+  min-width: 320px;
+  max-width: 400px;
+  
+  margin: 6px;
   padding: 10px;
-
-  border: 1px solid #eee;
   border-radius: 6px;
+  border: 1px solid #eee;
 
   display: flex;
   flex-direction: column;
